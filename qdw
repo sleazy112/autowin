@@ -1,0 +1,433 @@
+-- Gui to Lua
+-- Version: 3
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local Credits = Instance.new("TextLabel")
+local Court1 = Instance.new("TextButton")
+local Court2 = Instance.new("TextButton")
+local Corut3 = Instance.new("TextButton")
+local Court4 = Instance.new("TextButton")
+local Court5 = Instance.new("TextButton")
+local Court6 = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = ScreenGui
+OpenFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+OpenFrame.Position = UDim2.new(0.075667657, 0, 0.416433245, 0)
+OpenFrame.Size = UDim2.new(0, 107, 0, 32)
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.new(0.133333, 1, 0.403922)
+Open.Size = UDim2.new(0, 108, 0, 32)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.new(0, 0, 0)
+Open.TextScaled = true
+Open.TextSize = 14
+Open.TextWrapped = true
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+Main.Position = UDim2.new(0.38724035, 0, 0.182072833, 0)
+Main.Size = UDim2.new(0, 204, 0, 341)
+Main.Visible = false
+Main.Active = true
+Main.Draggable = true
+
+Credits.Name = "Credits"
+Credits.Parent = Main
+Credits.BackgroundColor3 = Color3.new(1, 1, 1)
+Credits.Size = UDim2.new(0, 204, 0, 24)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "AFK Auto Win GUI Made By Sleazy#0777"
+Credits.TextColor3 = Color3.new(0, 0, 0)
+Credits.TextSize = 12
+Credits.TextWrapped = true
+
+Court1.Name = "Court 1"
+Court1.Parent = Main
+Court1.BackgroundColor3 = Color3.new(1, 1, 1)
+Court1.Position = UDim2.new(0.0588235334, 0, 0.131964803, 0)
+Court1.Size = UDim2.new(0, 180, 0, 37)
+Court1.Font = Enum.Font.SourceSans
+Court1.Text = "Court 1"
+Court1.TextColor3 = Color3.new(0, 0, 0)
+Court1.TextSize = 14
+
+Court2.Name = "Court 2"
+Court2.Parent = Main
+Court2.BackgroundColor3 = Color3.new(1, 1, 1)
+Court2.Position = UDim2.new(0.0588235334, 0, 0.263929605, 0)
+Court2.Size = UDim2.new(0, 180, 0, 37)
+Court2.Font = Enum.Font.SourceSans
+Court2.Text = "Court 2"
+Court2.TextColor3 = Color3.new(0, 0, 0)
+Court2.TextSize = 14
+
+Corut3.Name = "Corut 3"
+Corut3.Parent = Main
+Corut3.BackgroundColor3 = Color3.new(1, 1, 1)
+Corut3.Position = UDim2.new(0.0588235334, 0, 0.398826987, 0)
+Corut3.Size = UDim2.new(0, 180, 0, 37)
+Corut3.Font = Enum.Font.SourceSans
+Corut3.Text = "Court 3"
+Corut3.TextColor3 = Color3.new(0, 0, 0)
+Corut3.TextSize = 14
+
+Court4.Name = "Court 4"
+Court4.Parent = Main
+Court4.BackgroundColor3 = Color3.new(1, 1, 1)
+Court4.Position = UDim2.new(0.0588235334, 0, 0.527859211, 0)
+Court4.Size = UDim2.new(0, 180, 0, 37)
+Court4.Font = Enum.Font.SourceSans
+Court4.Text = "Court 4"
+Court4.TextColor3 = Color3.new(0, 0, 0)
+Court4.TextSize = 14
+
+Court5.Name = "Court 5"
+Court5.Parent = Main
+Court5.BackgroundColor3 = Color3.new(1, 1, 1)
+Court5.Position = UDim2.new(0.0588235334, 0, 0.659824014, 0)
+Court5.Size = UDim2.new(0, 180, 0, 37)
+Court5.Font = Enum.Font.SourceSans
+Court5.Text = "Court 5"
+Court5.TextColor3 = Color3.new(0, 0, 0)
+Court5.TextSize = 14
+
+Court6.Name = "Court 6"
+Court6.Parent = Main
+Court6.BackgroundColor3 = Color3.new(1, 1, 1)
+Court6.Position = UDim2.new(0.0588235334, 0, 0.797653973, 0)
+Court6.Size = UDim2.new(0, 180, 0, 37)
+Court6.Font = Enum.Font.SourceSans
+Court6.Text = "Court 6"
+Court6.TextColor3 = Color3.new(0, 0, 0)
+Court6.TextSize = 14
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.new(0.988235, 0, 0.0235294)
+Close.Position = UDim2.new(0.897058845, 0, 0, 0)
+Close.Size = UDim2.new(0, 21, 0, 24)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.new(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14
+Close.TextWrapped = true
+
+-- Scripts:
+
+local function FYTTH_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(FYTTH_fake_script)()
+local function OSPC_fake_script() -- Credits.LocalScript 
+	local script = Instance.new('LocalScript', Credits)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(OSPC_fake_script)()
+local function HGRGOU_fake_script() -- Court1.LocalScript 
+	local script = Instance.new('LocalScript', Court1)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(HGRGOU_fake_script)()
+local function AFNVU_fake_script() -- Court2.LocalScript 
+	local script = Instance.new('LocalScript', Court2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(AFNVU_fake_script)()
+local function ZXLPCMV_fake_script() -- Corut3.LocalScript 
+	local script = Instance.new('LocalScript', Corut3)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(ZXLPCMV_fake_script)()
+local function LURQSA_fake_script() -- Court4.LocalScript 
+	local script = Instance.new('LocalScript', Court4)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(LURQSA_fake_script)()
+local function HKKRNI_fake_script() -- Court5.LocalScript 
+	local script = Instance.new('LocalScript', Court5)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(HKKRNI_fake_script)()
+local function SEOLDI_fake_script() -- Court6.LocalScript 
+	local script = Instance.new('LocalScript', Court6)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(SEOLDI_fake_script)()
+Open.MouseButton1Down:connect(function() -- Open
+	OpenFrame.Visible = false
+	Main.Visible = true
+end)
+Close.MouseButton1Down:connect(function() -- Close
+	Main.Visible = false
+	OpenFrame.Visible = true
+end)
+Court1.MouseButton1Down:connect(function()
+	for x = 1, 7 do
+		local A_1 = 1 ----- Change this to what court your on
+		local A_2 = 1
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+
+		local A_1 = 1 ----- Change this to what court your on
+		local A_2 = 2 
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+		wait(2)
+	end
+	plr = game.Players.LocalPlayer
+	hum = plr.Character.HumanoidRootPart
+	while wait(78)do
+		for x = 1, 7 do
+			local A_1 = 1 ----- Change this to what court your on
+			local A_2 = 1
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+
+			local A_1 = 1 ----- Change this to what court your on
+			local A_2 = 2 
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+			wait(2)
+		end
+	end
+end)
+Court2.MouseButton1Down:connect(function()
+	for x = 1, 7 do
+		local A_1 = 2 ----- Change this to what court your on
+		local A_2 = 1
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+
+		local A_1 = 2 ----- Change this to what court your on
+		local A_2 = 2 
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+		wait(2)
+	end
+	plr = game.Players.LocalPlayer
+	hum = plr.Character.HumanoidRootPart
+	while wait(78)do
+		for x = 1, 7 do
+			local A_1 = 2 ----- Change this to what court your on
+			local A_2 = 1
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+
+			local A_1 = 2 ----- Change this to what court your on
+			local A_2 = 2 
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+			wait(2)
+		end
+	end
+end)
+Corut3.MouseButton1Down:connect(function()
+	for x = 1, 7 do
+		local A_1 = 3 ----- Change this to what court your on
+		local A_2 = 1
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+
+		local A_1 = 3 ----- Change this to what court your on
+		local A_2 = 2 
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+		wait(2)
+	end
+	plr = game.Players.LocalPlayer
+	hum = plr.Character.HumanoidRootPart
+	while wait(78)do
+		for x = 1, 7 do
+			local A_1 = 3 ----- Change this to what court your on
+			local A_2 = 1
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+
+			local A_1 = 3 ----- Change this to what court your on
+			local A_2 = 2 
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+			wait(2)
+		end
+	end
+end)
+Court4.MouseButton1Down:connect(function()
+	for x = 1, 7 do
+		local A_1 = 4 ----- Change this to what court your on
+		local A_2 = 1
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+
+		local A_1 = 4 ----- Change this to what court your on
+		local A_2 = 2 
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+		wait(2)
+	end
+	plr = game.Players.LocalPlayer
+	hum = plr.Character.HumanoidRootPart
+	while wait(78)do
+		for x = 1, 7 do
+			local A_1 = 4 ----- Change this to what court your on
+			local A_2 = 1
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+
+			local A_1 = 4 ----- Change this to what court your on
+			local A_2 = 2 
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+			wait(2)
+		end
+	end
+end)
+Court5.MouseButton1Down:connect(function()
+	for x = 1, 7 do
+		local A_1 = 5 ----- Change this to what court your on
+		local A_2 = 1
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+
+		local A_1 = 5 ----- Change this to what court your on
+		local A_2 = 2 
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+		wait(2)
+	end
+	plr = game.Players.LocalPlayer
+	hum = plr.Character.HumanoidRootPart
+	while wait(78)do
+		for x = 1, 7 do
+			local A_1 = 5 ----- Change this to what court your on
+			local A_2 = 1
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+
+			local A_1 = 5 ----- Change this to what court your on
+			local A_2 = 2 
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+			wait(2)
+		end
+	end
+end)
+Court6.MouseButton1Down:connect(function()
+	for x = 1, 7 do
+		local A_1 = 6 ----- Change this to what court your on
+		local A_2 = 1
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+
+		local A_1 = 6 ----- Change this to what court your on
+		local A_2 = 2 
+		local Event = game:GetService("ReplicatedStorage")["join.court"]
+		Event:InvokeServer(A_1, A_2)
+		wait(2)
+	end
+	plr = game.Players.LocalPlayer
+	hum = plr.Character.HumanoidRootPart
+	while wait(78)do
+		for x = 1, 7 do
+			local A_1 = 6 ----- Change this to what court your on
+			local A_2 = 1
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+
+			local A_1 = 6 ----- Change this to what court your on
+			local A_2 = 2 
+			local Event = game:GetService("ReplicatedStorage")["join.court"]
+			Event:InvokeServer(A_1, A_2)
+			wait(2)
+		end
+	end
+end)
